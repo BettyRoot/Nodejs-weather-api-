@@ -1,0 +1,22 @@
+extends layout
+block content
+ main
+  if weather !== null
+   .tempBox
+     h1.cityName #{cityName}
+     .solutionBox.visible
+     .degrees #{weatherTemp} C
+     if weatherTemp > 0
+        img.imgBox(src='/images/sun.png' alt='sun.png')
+     else
+        if weatherTemp === 0
+            img.imgBox(src='/images/cloud.png' alt='cloud.png')
+        else
+            img.imgBox(src='/images/christmas-1293227_960_720.png' alt='snowflake.png')
+
+  if error !== null
+      .errorBox= error
+  a(href='/')
+     button.button
+       span clear
+

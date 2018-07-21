@@ -1,0 +1,11 @@
+extends layout
+block content
+ main
+    h4 Get the temperature by city name
+    form.form-control(action='/applications', method='POST')
+        .col-3
+         input.effect-18(type='text', name='city', placeholder='')
+         label City Name
+         span.focus-border
+        button.button(type='submit')
+            span go!
